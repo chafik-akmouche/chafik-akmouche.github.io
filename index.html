@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> CV </title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f7f9;
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .tabs-container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        .tab-menu {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tab-label {
+            padding: 12px 20px;
+            cursor: pointer;
+            background: #e1e4e8;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            border-radius: 8px 8px 0 0;
+            font-weight: bold;
+            transition: 0.3s;
+            color: #586069;
+        }
+
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: 0 8px 8px 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #radio-professional-experience:checked~.tab-menu label[for="radio-professional-experience"],
+        #radio-technical-skills:checked~.tab-menu label[for="radio-technical-skills"],
+        #radio-certifications:checked~.tab-menu label[for="radio-certifications"],
+        #radio-languages:checked~.tab-menu label[for="radio-languages"],
+        #radio-education:checked~.tab-menu label[for="radio-education"],
+        #radio-hobbies:checked~.tab-menu label[for="radio-hobbies"] {
+            background: white;
+            border-bottom: 2px solid white;
+            margin-bottom: -2px;
+            color: #0070ad;
+        }
+
+        #radio-professional-experience:checked~#content-professional-experience,
+        #radio-technical-skills:checked~#content-technical-skills,
+        #radio-certifications:checked~#content-certifications,
+        #radio-languages:checked~#content-languages,
+        #radio-education:checked~#content-education,
+        #radio-hobbies:checked~#content-hobbies {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tabs-container">
+        <input type="radio" name="tabs" id="radio-professional-experience" checked />
+        <input type="radio" name="tabs" id="radio-technical-skills" />
+        <input type="radio" name="tabs" id="radio-certifications" />
+        <input type="radio" name="tabs" id="radio-languages" />
+        <input type="radio" name="tabs" id="radio-education" />
+        <input type="radio" name="tabs" id="radio-hobbies">
+
+        <div class="tab-menu">
+            <label for="radio-professional-experience" class="tab-label">💼 Experience</label>
+            <label for="radio-technical-skills" class="tab-label">🛠️ Skills</label>
+            <label for="radio-certifications" class="tab-label">📜 Certifs</label>
+            <label for="radio-languages" class="tab-label">🌍 Languages</label>
+            <label for="radio-education" class="tab-label">🎓 Education</label>
+            <label for="radio-hobbies" class="tab-label">⚽ Hobbies</label>
+        </div>
+
+        <div id="content-professional-experience" class="tab-content">
+            <h2>Professional Experience</h2>
+            <p>...</p>
+        </div>
+
+        <div id="content-technical-skills" class="tab-content">
+            <h2>Technical Skills</h2>
+            <p>...</p>
+        </div>
+
+        <div id="content-certifications" class="tab-content">
+            <h2>Certifications</h2>
+            <p>...</p>
+        </div>
+
+        <div id="content-languages" class="tab-content">
+            <h2>Languages</h2>
+            <p>...</p>
+        </div>
+
+        <div id="content-education" class="tab-content">
+            <h2>Education</h2>
+            <p>...</p>
+        </div>
+
+        <div id="content-hobbies" class="tab-content">
+            <h2>Hobbies</h2>
+            <p>...</p>
+        </div>
+    </div>
+</body>
+
+</html>
