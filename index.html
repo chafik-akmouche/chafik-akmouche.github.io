@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> CV </title>
+    <title> CV Chafik AKMOUCHE </title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -135,21 +135,43 @@
         }
 
         /* Languages */
-        .language-item {
-            margin-bottom: 20px;
+        .lang-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 20px;
         }
 
-        .language-info {
+        .lang-card {
+            background: white;
+            border: 1px solid #e1e4e8;
+            padding: 20px;
+            border-radius: 12px;
+            position: relative;
+            transition: all 0.3s ease;
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 5px;
-            font-weight: 500;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100px;
+        }
+
+        .lang-card:hover {
+            border-color: #0070ad;
+            box-shadow: 0 8px 20px rgba(0, 112, 173, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .lang-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #1a1f23;
+            margin-bottom: 10px;
         }
 
         .progress-bar {
             background-color: #e1e4e8;
             border-radius: 10px;
-            height: 8px;
+            height: 10px;
             width: 100%;
         }
 
@@ -157,6 +179,90 @@
             background-color: #0070ad;
             height: 100%;
             border-radius: 10px;
+            transition: width 1s ease-in-out;
+        }
+
+        /* Education */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 30px auto;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #d1d5da;
+            top: 10px;
+            bottom: 10px;
+            left: 7px;
+            z-index: 1;
+        }
+
+        .education-card {
+            position: relative;
+            background: white;
+            border: 1px solid #e1e4e8;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .education-card::before {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background-color: #0070ad;
+            border: 4px solid #f4f7f9;
+            border-radius: 50%;
+            left: -40px;
+            top: 22px;
+            z-index: 3;
+            box-shadow: 0 0 0 2px white;
+        }
+
+        .education-card:hover {
+            border-color: #0070ad;
+            box-shadow: 0 8px 25px rgba(0, 112, 173, 0.15);
+            transform: translateY(-5px);
+            z-index: 10;
+        }
+
+        .edu-date {
+            font-weight: 800;
+            color: #0070ad;
+            font-size: 0.85rem;
+            display: inline-block;
+            background: #eef7ff;
+            padding: 2px 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        .edu-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #1a1f23;
+            margin: 5px 0;
+        }
+
+        .edu-school {
+            color: #444;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .edu-location {
+            font-size: 0.85rem;
+            color: #6a737d;
+            font-style: italic;
+            margin-top: 5px;
+            display: block;
         }
     </style>
 </head>
@@ -194,15 +300,19 @@
             <h2 style="color: #0070ad; border-bottom: 2px solid #eee; padding-bottom: 10px;">Main Certifications</h2>
             <div class="cert-grid">
                 <div class="cert-card">
-                    <span class="status-badge bg-main">Exam Passed</span>
+                    <span class="status-badge bg-main">Valid</span>
                     <div class="cert-title">Certified Implementation Specialist — HRSD</div>
                 </div>
                 <div class="cert-card">
-                    <span class="status-badge bg-main">Exam Passed</span>
+                    <span class="status-badge bg-main">Valid</span>
                     <div class="cert-title">Certified Implementation Specialist — ITSM</div>
                 </div>
                 <div class="cert-card">
-                    <span class="status-badge bg-main">Exam Passed</span>
+                    <span class="status-badge bg-main">In Progress</span>
+                    <div class="cert-title">Certified Implementation Specialist — DF</div>
+                </div>
+                <div class="cert-card">
+                    <span class="status-badge bg-main">Valid</span>
                     <div class="cert-title">Certified System Administrator (CSA)</div>
                 </div>
             </div>
@@ -211,23 +321,23 @@
                 Micro-Certifications</h2>
             <div class="cert-grid">
                 <div class="cert-card">
-                    <span class="status-badge bg-micro">Exam Passed</span>
+                    <span class="status-badge bg-micro">Valid</span>
                     <div class="cert-title">Micro-Certification — Automated Test Framework (ATF)</div>
                 </div>
                 <div class="cert-card">
-                    <span class="status-badge bg-micro">Exam Passed</span>
+                    <span class="status-badge bg-micro">Valid</span>
                     <div class="cert-title">Micro-Certification — Configure the CMDB</div>
                 </div>
                 <div class="cert-card">
-                    <span class="status-badge bg-micro">Exam Passed</span>
+                    <span class="status-badge bg-micro">Valid</span>
                     <div class="cert-title">Micro-Certification — Agile and Test Management</div>
                 </div>
                 <div class="cert-card">
-                    <span class="status-badge bg-micro">Exam Passed</span>
+                    <span class="status-badge bg-micro">Valid</span>
                     <div class="cert-title">Micro-Certification — Flow Designer</div>
                 </div>
                 <div class="cert-card">
-                    <span class="status-badge bg-micro">Exam Passed</span>
+                    <span class="status-badge bg-micro">Valid</span>
                     <div class="cert-title">Micro-Certification — IntegrationHub</div>
                 </div>
             </div>
@@ -235,53 +345,81 @@
 
         <!-- LANGUAGES -->
         <div id="content-languages" class="tab-content">
-            <h2>Languages</h2>
+            <h2 style="color: #0070ad; border-bottom: 2px solid #eee; padding-bottom: 10px;">Languages</h2>
 
-            <div class="language-item">
-                <div class="language-info">
-                    <span>English</span>
-                    <span>Professional / Technical</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 60%;"></div>
-                </div>
-            </div>
+            <div class="cert-grid lang-full-width">
 
-            <div class="language-item">
-                <div class="language-info">
-                    <span>French</span>
-                    <span>Fluent / Professional</span>
+                <div class="cert-card lang-card">
+                    <span class="status-badge bg-main">Professional</span>
+                    <div style="flex: 1;">
+                        <div class="cert-title">English</div>
+                        <div class="progress-bar" style="margin-top: 10px;">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 95%;"></div>
-                </div>
-            </div>
 
-            <div class="language-item">
-                <div class="language-info">
-                    <span>Arabic</span>
-                    <span>Native</span>
+                <div class="cert-card lang-card">
+                    <span class="status-badge bg-main">Native</span>
+                    <div style="flex: 1;">
+                        <div class="cert-title">French</div>
+                        <div class="progress-bar" style="margin-top: 10px;">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 100%;"></div>
-                </div>
-            </div>
 
-            <div class="language-item">
-                <div class="language-info">
-                    <span>Kabyle</span>
-                    <span>Native</span>
+                <div class="cert-card lang-card">
+                    <span class="status-badge bg-main">Native</span>
+                    <div style="flex: 1;">
+                        <div class="cert-title">Arabic</div>
+                        <div class="progress-bar" style="margin-top: 10px;">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 100%;"></div>
+
+                <div class="cert-card lang-card">
+                    <span class="status-badge bg-main">Native</span>
+                    <div style="flex: 1;">
+                        <div class="cert-title">Kabyle</div>
+                        <div class="progress-bar" style="margin-top: 10px;">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
 
         <!-- EDUCATION -->
         <div id="content-education" class="tab-content">
-            <h2>Education</h2>
-            <p>...</p>
+            <h2 style="color: #0070ad; border-bottom: 2px solid #eee; padding-bottom: 10px;">Education</h2>
+
+            <div class="timeline">
+
+                <div class="education-card">
+                    <span class="edu-date">2020 - 2022</span>
+                    <div class="edu-title">Master’s Degree in Artificial Intelligence</div>
+                    <div class="edu-school">UFR des Sciences - Université d'Angers</div>
+                    <div class="edu-location">Angers, France</div>
+                </div>
+
+                <div class="education-card">
+                    <span class="edu-date">2016 - 2018</span>
+                    <div class="edu-title">Master’s Degree in Distributed Systems and Networks</div>
+                    <div class="edu-school">Faculty of Exact Sciences - University of Béjaïa</div>
+                    <div class="edu-location">Béjaïa, Algeria</div>
+                </div>
+
+                <div class="education-card">
+                    <span class="edu-date">2013 - 2016</span>
+                    <div class="edu-title">Bachelor’s Degree in Computer Science</div>
+                    <div class="edu-school">Faculty of Exact Sciences - University of Béjaïa</div>
+                    <div class="edu-location">Béjaïa, Algeria</div>
+                </div>
+
+            </div>
         </div>
 
         <div id="content-hobbies" class="tab-content">
